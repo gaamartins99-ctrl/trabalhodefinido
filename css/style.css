@@ -1,0 +1,311 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    background-color: #847a8e;
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 4.5rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.6rem;
+}
+
+header p {
+    color: #38bdf8;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+/*menu de navegação*/
+
+nav {
+    background-color: #0f172a;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #1e293b;
+}
+
+nav a {
+    display: inline-block;
+    color: #94a3b8;
+    padding: 1.1rem 1.8rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #1e293b;
+}
+
+
+main {
+    max-width: 1140px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background: #ffffff;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.75rem;
+}
+
+/*cidade*/
+
+.sobre-conteúdo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.sobre-conteúdo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    flex: 1 1 380px;
+    box-shadow: 0 10px 20px rgba(236, 9, 9, 0.08);
+}
+
+.sobre-conteúdo div {
+    flex: 2 1 420px;
+}
+
+.sobre-conteúdo p {
+    font-size: 1.05rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+.sobre-conteúdo h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    color: #475569;
+    margin-top: 0.5rem;
+}
+
+ul li, ol li {
+    margin-bottom: 0.5rem;
+}
+
+/*arruma turismo e gastronomia*/
+
+.grid-atrativos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid #2563eb; /* Azul para pontos turísticos */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Cor alternativa elegante para os cards da página de gastronomia */
+.card.sabor {
+    border-top-color: #ea580c; /* Laranja quente para comida */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+    color: #0f172a;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.card p {
+    color: #475569;
+    font-size: 0.98rem;
+}
+
+/* [NOVO] Estilização das imagens internas dos Cards (Páginas internas) */
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Impede que a foto distorça ao redimensionar */
+    border-radius: 6px;
+    margin-bottom: 1.2rem;
+}
+
+
+.card p span {
+    font-weight: bold;
+    color: #ec0c0c;/*destaque*/
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+
+
+.tabela-wrapper {
+    overflow-x: auto; /* Adiciona barra de rolagem se a tela for muito pequena */
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+table th, table td {
+    padding: 1.1rem 1.3rem;
+    text-align: left;
+}
+
+table th {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+table tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/*formulario*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 1rem auto 0 auto;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+input, select, textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #1e293b;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.15);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/*parte de baixo*/
+
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 6rem;
+    font-size: 0.85rem;
+    border-top: 1px solid #1e293b;
+}
+
+/*lembre: para adaptar para celulares ou telas maiores ou menores*/
+@media (max-width: 640px) {
+    header {
+        padding: 3rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 0.9rem;
+        border-bottom: 1px solid #1e293b;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+}
